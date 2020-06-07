@@ -36,20 +36,17 @@
     <section class="blog">
       <h2 class="blog-headline">Recent Blogs</h2>
       <div class="blog-box">
-        <div class="blog-item clearfix">
-          <%= image_tag('img/forest.jpg',  class: 'blog-image') %>
-          <section class="blog-text">
-            <h3 class="blog-text-headline">
-              <a href="single.html">
-                Hopeful lessons from<br>
-                the battle to save<br>
-                rainforests
-              </a>
-            </h3>
-            <p class="blog-date">June 19, 2017</p>
-            <span class="category">Nature</span>
-          </section>
-        </div>
+        <%= @blog.each do |blog|%>
+         <div class="blog-item clearfix">
+           <div class="blog-image" ><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+           <section class="blog-text">
+            <h3 class="blog-text-headline"><<%= link_to blog.title, blog_path(blog) %>></h3>
+            <p class="blog-date">J<%= blog.created_at %></p>
+            <span class="category"><%= blog.category%></span>
+           </section>
+         </div>
+        <% end %> 
+      </div>
         <div class="blog-item clearfix">
           <%= image_tag('img/desert.jpg', class: 'blog-image') %>
           <section class="blog-text">
