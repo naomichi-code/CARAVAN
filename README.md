@@ -1,8 +1,8 @@
 
 # README
 
- DMM&nbsp;WEBCAMP
- 1章～7章：CARAVAN　完了
+DMM&nbsp;WEBCAMP
+- 1章～7章：CARAVAN　完了
 
 ---
 This README would normally document whatever steps are necessary to get the
